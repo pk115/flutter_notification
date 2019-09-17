@@ -10,12 +10,14 @@ A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- [packages: firebase_messaging](https://pub.dev/packages/firebase_messaging#-readme-tab-)
+- [packages: firebase_analytics](https://pub.dev/packages/firebase_analytics)
 
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-- [Cookbook: firebase_messaging](https://pub.dev/packages/firebase_messaging#-readme-tab-)
+
 
 # flutter_notification
 
@@ -28,7 +30,7 @@ samples, guidance on mobile development, and a full API reference.
 Android Integration #
 To integrate your plugin into the Android part of your app, follow these steps:
 
-# Using the Firebase Console add an Android app to your project: Follow the assistant, download the generated google-services.json file and place it inside android/app.
+# Using the [Firebase Console](https://console.firebase.google.com/u/0/) add an Android app to your project: Follow the assistant, download the generated google-services.json file and place it inside android/app.
 
 # Add the classpath to the [project]/android/build.gradle file.
 
