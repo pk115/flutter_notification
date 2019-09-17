@@ -17,6 +17,7 @@ samples, guidance on mobile development, and a full API reference.
 # flutter_notification
 
 # How to Setup
+
 - dependencies:
    firebase_messaging: ^5.1.5
    firebase_analytics: ^5.0.2
@@ -24,9 +25,10 @@ samples, guidance on mobile development, and a full API reference.
 Android Integration #
 To integrate your plugin into the Android part of your app, follow these steps:
 
-1. Using the Firebase Console add an Android app to your project: Follow the assistant, download the generated google-services.json file and place it inside android/app.
+# Using the Firebase Console add an Android app to your project: Follow the assistant, download the generated google-services.json file and place it inside android/app.
 
-2. Add the classpath to the [project]/android/build.gradle file.
+# Add the classpath to the [project]/android/build.gradle file.
+
 buildscript {
  // Example existing kotlin_version
     ext.kotlin_version = '1.3.0'
@@ -39,25 +41,29 @@ dependencies {
   classpath 'com.google.gms:google-services:4.3.2'
 }
 
-3. Add the apply plugin to the [project]/android/app/build.gradle file.
+# Add the apply plugin to the [project]/android/app/build.gradle file.
+
     dependencies {
         implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
         testImplementation 'junit:junit:4.12'
         androidTestImplementation 'androidx.test:runner:1.1.1'
         androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
-
     }
 
-// ADD THIS AT THE BOTTOM
+   // ADD THIS AT THE BOTTOM
     apply plugin: 'com.google.gms.google-services'
- Note: If this section is not completed you will get an error like this:
+    
+    
+   Note: If this section is not completed you will get an error like this:
 
-java.lang.IllegalStateException:
-Default FirebaseApp is not initialized in this process [package name].
-Make sure to call FirebaseApp.initializeApp(Context) first.
-Note: When you are debugging on Android, use a device or AVD with Google Play services. Otherwise you will not be able to authenticate.
+   java.lang.IllegalStateException:
+   Default FirebaseApp is not initialized in this process [package name].
+   Make sure to call FirebaseApp.initializeApp(Context) first.
+   Note: When you are debugging on Android, use a device or AVD with Google Play services. Otherwise you will not be able to     
+   authenticate.
 
-4. (optional, but recommended) If want to be notified in your app (via onResume and onLaunch, see below) when the user clicks on    a notification in the system tray include the following intent-filter within the <activity> tag of your          android/app/src/main/AndroidManifest.xml:
+# (optional, but recommended) If want to be notified in your app (via onResume and onLaunch, see below) when the user clicks on    a notification in the system tray include the following intent-filter within the <activity> tag of your         
+    android/app/src/main/AndroidManifest.xml:
   
   <intent-filter>
       <action android:name="FLUTTER_NOTIFICATION_CLICK" />
