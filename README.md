@@ -65,9 +65,10 @@ dependencies {
 # (optional, but recommended) If want to be notified in your app (via onResume and onLaunch, see below) when the user clicks on    a notification in the system tray include the following intent-filter within the <activity> tag of your         
     android/app/src/main/AndroidManifest.xml:
   
-  <intent-filter>
+  
+ // <intent-filter>
       <action android:name="FLUTTER_NOTIFICATION_CLICK" />
       <category android:name="android.intent.category.DEFAULT" />
-  </intent-filter>
+ // </intent-filter>
   
   
