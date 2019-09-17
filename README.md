@@ -24,7 +24,9 @@ samples, guidance on mobile development, and a full API reference.
 # How to Setup
 
 - dependencies:
+
    firebase_messaging: ^5.1.5
+   
    firebase_analytics: ^5.0.2
 
 Android Integration #
